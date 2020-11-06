@@ -35,9 +35,6 @@ function newPage({ posts }) {
     }
   return(
     <>
-      {
-        console.log("RENDER")
-      }
       <div className={style.container}>
         <div className={style.all_box_music}>
             <div className={style.left_box_music}>
@@ -93,7 +90,7 @@ function newPage({ posts }) {
 export async function getStaticProps(next) {
     // Call an external API endpoint to get posts.
     // You can use any data fetching library
-    const res = await fetch('http://localhost:8082/posts');
+    const res = await fetch('https://preemptiveworthlessdemo--five-nine.repl.co/posts');
     console.log("res",res);
     const posts = await res.json();
   
