@@ -100,6 +100,7 @@ export async function getStaticProps(next) {
       props: {
         posts,
       },
+      revalidate : 30,
       // notFound : true,
       // redirect: {
       //   destination: '/',
